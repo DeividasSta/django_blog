@@ -4,4 +4,7 @@ from .models import Article
 
 
 def index(request):
-    return render(request, 'articles/index.html')
+    articles = Article.objects.order_by('-pub_date')
+    context = {'articles': articles}
+
+    return render(request, 'articles/index.html', context)
