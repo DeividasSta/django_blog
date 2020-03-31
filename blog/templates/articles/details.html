@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="pt-5">
+        <h3 class="card-title">{{ article.title}}</h3>
+        <h6 class="card-subtitle mb-2 text-muted pb-3">{{ article.pub_date }}</h6>
+        <img src="{{ article.img_url }}"  class="img" style="height: 350px; width: 450px">
+        <p class="pt-4">{{ article.body }}</p>
+    </div>
+{% endblock %}
